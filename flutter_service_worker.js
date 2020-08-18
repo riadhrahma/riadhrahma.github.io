@@ -3,13 +3,16 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "a84c5bfe66803e0230ee44b1fbba5635",
+  "assets/AssetManifest.json": "2b313b52db1c7972771f2a417cf39852",
+"assets/Assets/chez1.png": "6c7be6a32d66f402b46855aa35b6b6e4",
 "assets/Assets/chezm.png": "cc453119e5d6aee3d75ee8cca7c9e048",
 "assets/Assets/facebook.png": "ee364acfa91a040e79c1e472485f84ac",
 "assets/Assets/light1.png": "e147401c8e89bda28ea66c783db8946d",
 "assets/Assets/meuble1.png": "c5ef601b7443f853846aa35e4556244f",
 "assets/Assets/meubletest.jpg": "3e62d5deae334a715a51d3d292e1bcc0",
 "assets/Assets/rss.png": "96490446ca5766cfb1c2181a46bce4ea",
+"assets/Assets/salon1.png": "5324b1e89113d3b14fa7381981974841",
+"assets/Assets/salon2.png": "52bf19a3b3dd8a2534ae8312c3128ad0",
 "assets/Assets/table1.png": "f9612bf75dd714c49e2ce382aa9b362b",
 "assets/Assets/tv1.png": "3d7b38623a5d724728a4ca999bae8d34",
 "assets/Assets/twitter.png": "d61fdea8fee5d9f84babb3a8a73c3660",
@@ -23,7 +26,7 @@ const RESOURCES = {
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "index.html": "096efa9cfb0ccbe3da89c946eb541f80",
 "/": "096efa9cfb0ccbe3da89c946eb541f80",
-"main.dart.js": "9f0868f28ee369abd5dbd8c7461ac21c",
+"main.dart.js": "9963b83fe849e676c5b703bd2b3d05de",
 "manifest.json": "8c8688b1d38493455f386d2642ef7033"
 };
 
