@@ -3,9 +3,16 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "2093f9ff26e5de4c94c363e66f6eb196",
+  "assets/AssetManifest.json": "95d69fd3fb788d45452204e0c99d4636",
 "assets/Assets/app-store-img.png": "4b70f6fae44727678540b68e876908b1",
+"assets/Assets/font/IBMPlexSans-Bold.ttf": "5159a5d89abe8bf68b09b569dbeccbc0",
+"assets/Assets/font/IBMPlexSans-ExtraLight.ttf": "dc4c7cbc44c833f9a7540a6464a015fa",
+"assets/Assets/font/IBMPlexSans-Light.ttf": "29047654270fd882ab9e9ec10e28f7c5",
+"assets/Assets/font/IBMPlexSans-Medium.ttf": "ee83103a4a777209b0f759a4ff598066",
+"assets/Assets/font/IBMPlexSans-Regular.ttf": "c02b4dc6554c116e4c40f254889d5871",
+"assets/Assets/font/IBMPlexSans-SemiBold.ttf": "1ca9107e7544d3424419585c7c84cb67",
 "assets/Assets/google-play-img.png": "f06b908907d5d4f2aaf733e2bee7ea8e",
+"assets/Assets/Group%2520132.png": "c5d8efe22fe15892bc2003862feb26a2",
 "assets/Assets/Group124.png": "3231f2c579526367bbd7a82980a64f84",
 "assets/Assets/ic_facebook.png": "f945768a42928cebaf659dc63ef139ad",
 "assets/Assets/ic_instagram.png": "30ad564957a6c8bfdaa1fa24afea34e4",
@@ -23,16 +30,17 @@ const RESOURCES = {
 "assets/Assets/img_why_04_3x.png": "40b06fb536e631043d4cf94d2e6e8689",
 "assets/Assets/img_why_05_3x.png": "7a2a5cc11c74b2fef0e1b65605e10d43",
 "assets/Assets/img_why_06_3x.png": "a93b8ef4c64469ca0f914dfc3b6e3357",
-"assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
+"assets/Assets/logo.png": "5e22889981013e31caba34bff6c092af",
+"assets/FontManifest.json": "d052fc566f2179ad61aea35d12a76b17",
 "assets/fonts/MaterialIcons-Regular.otf": "a68d2a28c526b3b070aefca4bac93d25",
-"assets/NOTICES": "1ec095b2459fe1e98e8ccb337e3588ff",
+"assets/NOTICES": "62faf840679a919946ccc7ce93ac2973",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "index.html": "9a774c88ae61cc68a239daaf8849fdf0",
 "/": "9a774c88ae61cc68a239daaf8849fdf0",
-"main.dart.js": "529a025d1c3f2ba4188b89495521f51e",
+"main.dart.js": "e71582a3304eb9160e7a7bb175b95bd3",
 "manifest.json": "b1eebabc7dc089a263d3f857a42cc43c"
 };
 
@@ -50,8 +58,8 @@ const CORE = [
 self.addEventListener("install", (event) => {
   return event.waitUntil(
     caches.open(TEMP).then((cache) => {
-      // Provide a 'reload' param to ensure the latest version is downloaded.
-      return cache.addAll(CORE.map((value) => new Request(value, {'cache': 'reload'})));
+      return cache.addAll(
+        CORE.map((value) => new Request(value + '?revision=' + RESOURCES[value], {'cache': 'reload'})));
     })
   );
 });
