@@ -40,7 +40,7 @@ const RESOURCES = {
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "index.html": "03cfde34842db380b77ccb636c38f1a3",
 "/": "03cfde34842db380b77ccb636c38f1a3",
-"main.dart.js": "1b03efe17970a966cb97c568b5ab3a11",
+"main.dart.js": "ab50076a39e405e485abecd33481792c",
 "mainAgora.ts": "a8033152739a49d7a87cf06542ded901",
 "manifest.json": "b1eebabc7dc089a263d3f857a42cc43c",
 "node_modules/agora-rtc-sdk/AgoraRTCSDK.min.js": "d790a4e9add83bff20a321f4be848fd5",
