@@ -33,26 +33,16 @@ const RESOURCES = {
 "assets/Assets/logo.png": "5e22889981013e31caba34bff6c092af",
 "assets/FontManifest.json": "d052fc566f2179ad61aea35d12a76b17",
 "assets/fonts/MaterialIcons-Regular.otf": "a68d2a28c526b3b070aefca4bac93d25",
-"assets/NOTICES": "f03c6421ea9a4b3e5dc01abf3532f5c5",
+"assets/NOTICES": "23a29a25c15ac10c3015dbaf9f9b351d",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "3cd4e8e0a44bd7f715154703ce6305e6",
-"/": "3cd4e8e0a44bd7f715154703ce6305e6",
-"main.dart.js": "3ad3c752de8438e6e48f942ffc70baec",
-"mainAgora.ts": "a8033152739a49d7a87cf06542ded901",
-"manifest.json": "b1eebabc7dc089a263d3f857a42cc43c",
-"node_modules/agora-rtc-sdk/AgoraRTCSDK.min.js": "d790a4e9add83bff20a321f4be848fd5",
-"node_modules/agora-rtc-sdk/index.d.ts": "a38499c997a97cb119ab991664a92251",
-"node_modules/agora-rtc-sdk/LICENSE.md": "f0ab9cdc0c67d65e44c809ae66ba00ac",
-"node_modules/agora-rtc-sdk/package.json": "24066ab948f079f4a93dc4c8091ece02",
-"node_modules/agora-rtc-sdk/README.md": "9d390d400850f51ab5e43120190e730a",
-"node_modules/agora-rtc-sdk-ng/AgoraRTC_N-production.js": "b14a0c0b79bf4561eb9cf513da994ba0",
-"node_modules/agora-rtc-sdk-ng/package.json": "19cd992bb6f78592add78d4bac4dc6e3",
-"node_modules/agora-rtc-sdk-ng/rtc-sdk_en.d.ts": "8f9df0cd5435007dacc5f4428af20efb",
-"operations.ts": "ab12db5571df5bf926db96986f73aaf3",
-"package-lock.json": "05723af2473670b9970f659f6bdf7e1f"
+"index.html": "f4f86faad2d8b0709bfae1789e81d54a",
+"/": "f4f86faad2d8b0709bfae1789e81d54a",
+"main.dart.js": "321a45844342fc9103dfc0349adb66e9",
+"manifest.json": "d6776a7ff7b59012616d197aa89761a6",
+"version.json": "ae3eae3d72ec3931812533bd72894cb5"
 };
 
 // The application shell files that are downloaded before a service worker can
@@ -66,6 +56,7 @@ const CORE = [
 "assets/FontManifest.json"];
 // During install, the TEMP cache is populated with the application shell files.
 self.addEventListener("install", (event) => {
+  self.skipWaiting();
   return event.waitUntil(
     caches.open(TEMP).then((cache) => {
       return cache.addAll(
@@ -134,6 +125,9 @@ self.addEventListener("activate", function(event) {
 // The fetch handler redirects requests for RESOURCE files to the service
 // worker cache.
 self.addEventListener("fetch", (event) => {
+  if (event.request.method !== 'GET') {
+    return;
+  }
   var origin = self.location.origin;
   var key = event.request.url.substring(origin.length + 1);
   // Redirect URLs to the index.html
@@ -143,9 +137,10 @@ self.addEventListener("fetch", (event) => {
   if (event.request.url == origin || event.request.url.startsWith(origin + '/#') || key == '') {
     key = '/';
   }
-  // If the URL is not the RESOURCE list, skip the cache.
+  // If the URL is not the RESOURCE list then return to signal that the
+  // browser should take over.
   if (!RESOURCES[key]) {
-    return event.respondWith(fetch(event.request));
+    return;
   }
   // If the URL is the index.html, perform an online-first request.
   if (key == '/') {
@@ -169,10 +164,12 @@ self.addEventListener('message', (event) => {
   // SkipWaiting can be used to immediately activate a waiting service worker.
   // This will also require a page refresh triggered by the main worker.
   if (event.data === 'skipWaiting') {
-    return self.skipWaiting();
+    self.skipWaiting();
+    return;
   }
-  if (event.message === 'downloadOffline') {
+  if (event.data === 'downloadOffline') {
     downloadOffline();
+    return;
   }
 });
 
