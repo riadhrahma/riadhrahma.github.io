@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "fcd9285e118143f27a558e10e119db45",
+  "assets/AssetManifest.json": "48410758a0ecb2442e38651b7658a4de",
 "assets/Assets/app-store-img.png": "4b70f6fae44727678540b68e876908b1",
 "assets/Assets/font/IBMPlexSans-Bold.ttf": "5159a5d89abe8bf68b09b569dbeccbc0",
 "assets/Assets/font/IBMPlexSans-ExtraLight.ttf": "dc4c7cbc44c833f9a7540a6464a015fa",
@@ -11,6 +11,7 @@ const RESOURCES = {
 "assets/Assets/font/IBMPlexSans-Medium.ttf": "ee83103a4a777209b0f759a4ff598066",
 "assets/Assets/font/IBMPlexSans-Regular.ttf": "c02b4dc6554c116e4c40f254889d5871",
 "assets/Assets/font/IBMPlexSans-SemiBold.ttf": "1ca9107e7544d3424419585c7c84cb67",
+"assets/Assets/Frame%252064.png": "7d5efaa03e58d902c9a2e2a6ac48a5fa",
 "assets/Assets/google-play-img.png": "f06b908907d5d4f2aaf733e2bee7ea8e",
 "assets/Assets/Group%2520132.png": "4fbafd5aaeeb9504fa233339c64300a6",
 "assets/Assets/Group124.png": "3231f2c579526367bbd7a82980a64f84",
@@ -51,9 +52,9 @@ const RESOURCES = {
 "favicon.png": "166c3b8586bf0d9eb399343efb7586aa",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "d04c30f7852c190cc78d2221ae2fa24f",
-"/": "d04c30f7852c190cc78d2221ae2fa24f",
-"main.dart.js": "2f0bf8f8dbcdb74362b1f597585e0d31",
+"index.html": "cf0e8a2e4a2cfa51940a1fec7d4ba16f",
+"/": "cf0e8a2e4a2cfa51940a1fec7d4ba16f",
+"main.dart.js": "9466fd87c9728ab92b5a11dc464cf5c5",
 "manifest.json": "d6776a7ff7b59012616d197aa89761a6",
 "version.json": "ae3eae3d72ec3931812533bd72894cb5"
 };
