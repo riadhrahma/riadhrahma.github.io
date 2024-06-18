@@ -1620,7 +1620,7 @@ s.a8K()
 return s},
 aY4(a){return new A.abO($.a8,a)},
 aFN(){var s,r,q,p,o,n=A.aXH(self.window.navigator)
-if(n==null||n.length===0)return B.pI
+if(n==null||n.length===0)return B.pH
 s=A.a([],t.ss)
 for(r=n.length,q=0;q<n.length;n.length===r||(0,A.R)(n),++q){p=n[q]
 o=J.aJY(p,"-")
@@ -8019,7 +8019,7 @@ aBn(a,b,c){var s,r,q
 if(b===c)return""
 if(!A.aPF(a.charCodeAt(b)))A.zI(a,b,"Scheme not starting with alphabetic character")
 for(s=b,r=!1;s<c;++s){q=a.charCodeAt(s)
-if(!(q<128&&(B.pG[q>>>4]&1<<(q&15))!==0))A.zI(a,s,"Illegal scheme character")
+if(!(q<128&&(B.pF[q>>>4]&1<<(q&15))!==0))A.zI(a,s,"Illegal scheme character")
 if(65<=q&&q<=90)r=!0}a=B.c.R(a,b,c)
 return A.b46(r?a.toLowerCase():a)},
 b46(a){if(a==="http")return"http"
@@ -8032,7 +8032,7 @@ return A.KD(a,b,c,B.KM,!1,!1)},
 aPI(a,b,c,d,e,f){var s,r=e==="file",q=r||f
 if(a==null){if(d==null)return r?"/":""
 s=new A.T(d,new A.aBh(),A.a_(d).h("T<1,e>")).aU(0,"/")}else if(d!=null)throw A.c(A.bc("Both path and pathSegments specified",null))
-else s=A.KD(a,b,c,B.pJ,!0,!0)
+else s=A.KD(a,b,c,B.pI,!0,!0)
 if(s.length===0){if(r)return"/"}else if(q&&!B.c.aX(s,"/"))s="/"+s
 return A.b4h(s,e,f)},
 b4h(a,b,c){var s=b.length===0
@@ -8123,7 +8123,7 @@ return B.b.aU(s,"/")},
 aPE(a){var s,r,q=a.length
 if(q>=2&&A.aPF(a.charCodeAt(0)))for(s=1;s<q;++s){r=a.charCodeAt(s)
 if(r===58)return B.c.R(a,0,s)+"%3A"+B.c.bA(a,s+1)
-if(r>127||(B.pG[r>>>4]&1<<(r&15))===0)break}return a},
+if(r>127||(B.pF[r>>>4]&1<<(r&15))===0)break}return a},
 b4j(a,b){if(a.awj("package")&&a.c==null)return A.aQN(b,0,b.length)
 return-1},
 b4b(){return A.a([],t.s)},
@@ -47865,7 +47865,7 @@ r=B.c.fw(m,"?",s)
 q=m.length
 if(r>=0){p=A.KD(m,r+1,q,B.eT,!1,!1)
 q=r}else p=n
-m=o.c=new A.XJ("data","",n,n,A.KD(m,s,q,B.pJ,!1,!1),p,n)}return m},
+m=o.c=new A.XJ("data","",n,n,A.KD(m,s,q,B.pI,!1,!1),p,n)}return m},
 k(a){var s=this.a
 return this.b[0]===-1?"data:"+s:s}}
 A.aCj.prototype={
@@ -50865,14 +50865,14 @@ t.W.a(s)
 r=J.aa(s)
 q=r.i(s,0)
 q.toString
-return new A.LX(B.pF[A.bS(q)],A.aX(r.i(s,1)))
+return new A.LX(B.pE[A.bS(q)],A.aX(r.i(s,1)))
 case 129:s=i.d5(0,b)
 s.toString
 t.W.a(s)
 r=J.aa(s)
 q=r.i(s,0)
 q.toString
-return new A.LY(B.pF[A.bS(q)],A.aX(r.i(s,1)),A.aPX(r.i(s,2)))
+return new A.LY(B.pE[A.bS(q)],A.aX(r.i(s,1)),A.aPX(r.i(s,2)))
 case 130:s=i.d5(0,b)
 s.toString
 r=t.W
@@ -56355,7 +56355,7 @@ if(s==null)s=B.i1
 p=p.e
 o=r.gahL()
 r.a.toString
-return new A.GM(q,q,q,new A.axy(),q,q,q,q,q,p,B.Oo,q,q,q,B.M5,r.gahX(),"",q,B.X_,s,q,o,q,q,B.pI,!1,!1,!1,!1,r.gahd(),!0,q,q,q,new A.ro(r,t.bT))},
+return new A.GM(q,q,q,new A.axy(),q,q,q,q,q,p,B.Oo,q,q,q,B.M5,r.gahX(),"",q,B.X_,s,q,o,q,q,B.pH,!1,!1,!1,!1,r.gahd(),!0,q,q,q,new A.ro(r,t.bT))},
 K(a){var s,r=null,q=A.vU(!1,!1,this.aar(a),r,r,r,r,!0,r,r,r,new A.axz(),r,r)
 this.a.toString
 s=this.d
@@ -94442,12 +94442,12 @@ f=i.gf7().d
 f.toString
 n=A.bo(f,B.p,j,B.m,j,r)
 r=g.a
-f=A.aLX("assets/background_design.jpg",B.na,g.b,r)
+f=A.aLX("background_design.jpg",B.na,g.b,r)
 m=A.a0(B.d.ak(229.5),255,255,255)
 l=a.av(t.yS)
 l=(l==null?B.hf:l).w.f4(B.ap)
 k=t.p
-return A.kb(B.jg,A.a([f,A.cT(j,new A.af(B.hl,A.c5(A.a([A.fK(A.a([A.fk(A.c5(A.a([new A.af(B.cN,s,j),q,A.alI(j,j,B.cG,j,j,!0,j,A.cD(A.a([A.cD(j,A.kh(j,j,A.U(a).ax.b,j,j,j,j,j,j,j,j,j,j,j,j,j,j,!0,j,j,j,j,j,j,j,j),"Creative Developer"),A.cD(j,j," from "+A.i(i.gf7().b)+"!")],t.Ne),l,"A "),B.p,j,j,B.ab,B.b_),new A.af(B.ct,n,j),new A.af(B.cu,A.fK(A.a([new A.af(B.kk,p,j),o],k),B.F,B.C,B.x),j),A.fK(A.a([new A.af(B.dw,A.rx(!1,!0,B.AT,j,!0,j,j,j,j,j,j,j,j,j,new A.af_(this,i),j,j,j,j),j),A.rx(!1,!0,B.AS,j,!0,j,j,j,j,j,j,j,j,j,new A.af0(this,i),j,j,j,j)],k),B.F,B.aY,B.x)],k),B.ah,B.C,B.x),j,450),B.fu,new A.af(B.dw,A.cT(j,j,B.n,j,j,new A.cy(j,B.ot,A.MF(A.U(a).ax.b,12),j,j,j,B.fP),300,j,j,300),j)],k),B.F,B.aY,B.aZ),new A.af(B.kl,A.cT(j,B.PY,B.n,j,j,new A.cy(B.i,j,j,j,A.a([new A.dn(5,B.bp,A.a0(B.d.ak(25.5),158,158,158),B.dN,7)],t.sq),j,B.a4),j,j,j,j),j)],k),B.F,B.aY,B.x),j),B.n,m,j,j,j,j,j,r)],k),B.ag,B.bZ)}}
+return A.kb(B.jg,A.a([f,A.cT(j,new A.af(B.hl,A.c5(A.a([A.fK(A.a([A.fk(A.c5(A.a([new A.af(B.cN,s,j),q,A.alI(j,j,B.cG,j,j,!0,j,A.cD(A.a([A.cD(j,A.kh(j,j,A.U(a).ax.b,j,j,j,j,j,j,j,j,j,j,j,j,j,j,!0,j,j,j,j,j,j,j,j),"Creative Developer"),A.cD(j,j," from "+A.i(i.gf7().b)+"!")],t.Ne),l,"A "),B.p,j,j,B.ab,B.b_),new A.af(B.ct,n,j),new A.af(B.cu,A.fK(A.a([new A.af(B.kk,p,j),o],k),B.F,B.C,B.x),j),A.fK(A.a([new A.af(B.dw,A.rx(!1,!0,B.AS,j,!0,j,j,j,j,j,j,j,j,j,new A.af_(this,i),j,j,j,j),j),A.rx(!1,!0,B.AT,j,!0,j,j,j,j,j,j,j,j,j,new A.af0(this,i),j,j,j,j)],k),B.F,B.aY,B.x)],k),B.ah,B.C,B.x),j,450),B.fu,new A.af(B.dw,A.cT(j,j,B.n,j,j,new A.cy(j,B.ot,A.MF(A.U(a).ax.b,12),j,j,j,B.fP),300,j,j,300),j)],k),B.F,B.aY,B.aZ),new A.af(B.kl,A.cT(j,B.PX,B.n,j,j,new A.cy(B.i,j,j,j,A.a([new A.dn(5,B.bp,A.a0(B.d.ak(25.5),158,158,158),B.dN,7)],t.sq),j,B.a4),j,j,j,j),j)],k),B.F,B.aY,B.x),j),B.n,m,j,j,j,j,j,r)],k),B.ag,B.bZ)}}
 A.aeY.prototype={
 $0(){$.ey().jp(2,B.bf,B.an)
 J.h0(A.e_(this.a,!1,t.A),2)},
@@ -94488,7 +94488,7 @@ s=A.U(a).p2.as
 s.toString
 return A.fk(A.c5(A.a([new A.af(B.J2,q,r),p,A.bo(this.e,B.e1,r,B.m,r,s)],t.p),B.F,B.aY,B.x),r,270)}}
 A.M9.prototype={
-K(a){var s,r,q,p,o=null,n=A.U(a).p2,m=A.aHm("assets/logo.svg",B.l,o,o),l=n.as
+K(a){var s,r,q,p,o=null,n=A.U(a).p2,m=A.aHm("logo.svg",B.l,o,o),l=n.as
 l.toString
 s=A.bo("Riadh.G",B.p,o,B.m,o,l)
 r=A.aiC(A.bo("Download Cv",B.p,o,B.m,o,l),new A.a6s(this))
@@ -94709,12 +94709,12 @@ f=i.gf7().d
 f.toString
 n=A.bo(f,B.p,j,B.m,j,r)
 r=g.a
-f=A.aLX("assets/background_design.jpg",B.na,g.b,r)
+f=A.aLX("background_design.jpg",B.na,g.b,r)
 m=A.a0(B.d.ak(229.5),255,255,255)
 l=a.av(t.yS)
 l=(l==null?B.hf:l).w.f4(B.ap)
 k=t.p
-return A.kb(B.jg,A.a([f,A.cT(j,new A.af(B.hi,A.c5(A.a([A.VS(A.a([A.c5(A.a([new A.af(B.cN,s,j),q,A.alI(j,j,B.cG,j,j,!0,j,A.cD(A.a([A.cD(j,A.kh(j,j,A.U(a).ax.b,j,j,j,j,j,j,j,j,j,j,j,j,j,j,!0,j,j,j,j,j,j,j,j),"Creative Developer"),A.cD(j,j," from "+A.i(i.gf7().b)+"!")],t.Ne),l,"A "),B.p,j,j,B.ab,B.b_),new A.af(B.ct,n,j),new A.af(B.cu,A.fK(A.a([new A.af(B.kk,p,j),o],k),B.F,B.C,B.x),j),A.fK(A.a([new A.af(B.dw,A.rx(!1,!0,B.AT,j,!0,j,j,j,j,j,j,j,j,j,new A.aeW(this,i),j,j,j,j),j),A.rx(!1,!0,B.AS,j,!0,j,j,j,j,j,j,j,j,j,new A.aeX(this,i),j,j,j,j)],k),B.F,B.aY,B.x)],k),B.ah,B.C,B.x),A.kP(new A.af(B.dw,A.cT(j,j,B.n,j,j,new A.cy(j,B.ot,A.MF(A.U(a).ax.b,12),j,j,j,B.fP),300,j,j,300),j),j,j)],k)),new A.af(B.Ja,A.cT(j,B.PZ,B.n,j,j,new A.cy(B.i,j,j,j,A.a([new A.dn(5,B.bp,A.a0(B.d.ak(25.5),158,158,158),B.dN,7)],t.sq),j,B.a4),j,j,j,r),j)],k),B.F,B.aY,B.x),j),B.n,m,j,j,j,j,j,r)],k),B.ag,B.bZ)}}
+return A.kb(B.jg,A.a([f,A.cT(j,new A.af(B.hi,A.c5(A.a([A.VS(A.a([A.c5(A.a([new A.af(B.cN,s,j),q,A.alI(j,j,B.cG,j,j,!0,j,A.cD(A.a([A.cD(j,A.kh(j,j,A.U(a).ax.b,j,j,j,j,j,j,j,j,j,j,j,j,j,j,!0,j,j,j,j,j,j,j,j),"Creative Developer"),A.cD(j,j," from "+A.i(i.gf7().b)+"!")],t.Ne),l,"A "),B.p,j,j,B.ab,B.b_),new A.af(B.ct,n,j),new A.af(B.cu,A.fK(A.a([new A.af(B.kk,p,j),o],k),B.F,B.C,B.x),j),A.fK(A.a([new A.af(B.dw,A.rx(!1,!0,B.AS,j,!0,j,j,j,j,j,j,j,j,j,new A.aeW(this,i),j,j,j,j),j),A.rx(!1,!0,B.AT,j,!0,j,j,j,j,j,j,j,j,j,new A.aeX(this,i),j,j,j,j)],k),B.F,B.aY,B.x)],k),B.ah,B.C,B.x),A.kP(new A.af(B.dw,A.cT(j,j,B.n,j,j,new A.cy(j,B.ot,A.MF(A.U(a).ax.b,12),j,j,j,B.fP),300,j,j,300),j),j,j)],k)),new A.af(B.Ja,A.cT(j,B.PZ,B.n,j,j,new A.cy(B.i,j,j,j,A.a([new A.dn(5,B.bp,A.a0(B.d.ak(25.5),158,158,158),B.dN,7)],t.sq),j,B.a4),j,j,j,r),j)],k),B.F,B.aY,B.x),j),B.n,m,j,j,j,j,j,r)],k),B.ag,B.bZ)}}
 A.aeU.prototype={
 $0(){$.ey().jp(2,B.bf,B.an)
 J.h0(A.e_(this.a,!1,t.A),2)},
@@ -94749,7 +94749,7 @@ A.ajB.prototype={
 $0(){this.a.c.w.$1(this.b)},
 $S:0}
 A.M8.prototype={
-K(a){var s,r,q,p,o=null,n=A.U(a).p2,m=A.aHm("assets/logo.svg",B.l,o,o),l=n.as
+K(a){var s,r,q,p,o=null,n=A.U(a).p2,m=A.aHm("logo.svg",B.l,o,o),l=n.as
 l.toString
 s=A.bo("Riadh.G",B.p,o,B.m,o,l)
 r=A.aiC(A.bo("Download Cv",B.p,o,B.m,o,l),new A.a6n(this))
@@ -99311,14 +99311,14 @@ if(h!=null&&h!==4)s.sa47(h)
 if(i!=null&&i!==0)s.sir(i)}this.x.push(s)},
 axD(a,b,c,d,e,f,g,h){var s,r,q=A.a([],t.t_)
 for(s=e.length,r=0;r<s;++r)q.push(new A.N(e[r]>>>0))
-this.z.push(A.aGa(new A.l(a,b),new A.l(c,d),q,f,B.pH[g]))},
+this.z.push(A.aGa(new A.l(a,b),new A.l(c,d),q,f,B.pG[g]))},
 axG(a,b,c,d,e,f,g,h,i,j){var s,r,q,p,o,n=new A.l(a,b)
 if(d==null)s=null
 else{e.toString
 s=new A.l(d,e)}r=A.a([],t.t_)
 for(q=f.length,p=0;p<q;++p)r.push(new A.N(f[p]>>>0))
 o=!J.d(s,n)&&s!=null
-q=B.pH[i]
+q=B.pG[i]
 this.z.push(A.aYZ(n,c,r,g,q,h,o?s:null))},
 LL(a,b,c,d){return this.axv(a,b,c,d)},
 axv(a,b,c,d){var s=0,r=A.C(t.H),q=this,p,o,n,m,l
@@ -105085,7 +105085,7 @@ B.jm=new A.Ag(0,"polite")
 B.Cb=new A.Mf(0,"polite")
 B.jn=new A.Ag(1,"assertive")
 B.mX=new A.Mf(1,"assertive")
-B.ej=new A.uZ("assets/img_1.png",null,null)
+B.ej=new A.uZ("img_1.png",null,null)
 B.dF=A.a(s([]),t.s)
 B.j=new A.UH(1,"downstream")
 B.ma=new A.hl(-1,-1,B.j,!1,-1,-1)
@@ -105473,12 +105473,12 @@ B.n=new A.vd(0,"none")
 B.ct=new A.aA(0,0,0,12)
 B.a1G=new A.asg(0,"material")
 B.nH=new A.AH(null)
-B.PX=new A.af(B.ct,B.nH,null)
+B.PY=new A.af(B.ct,B.nH,null)
 B.Bd=new A.I(!0,B.i,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.Yz=new A.lH("Loading",null,B.Bd,null,null,null,null,null,null)
-B.LS=A.a(s([B.PX,B.Yz]),t.p)
-B.HO=new A.vk(B.am,B.C,B.x,B.F,null,B.cj,null,B.LS,null)
-B.EA=new A.mf(B.P,null,null,B.HO,null)
+B.LS=A.a(s([B.PY,B.Yz]),t.p)
+B.HN=new A.vk(B.am,B.C,B.x,B.F,null,B.cj,null,B.LS,null)
+B.EA=new A.mf(B.P,null,null,B.HN,null)
 B.EC=new A.AF(null,null,null,null,null,null,null,null,null)
 B.ED=new A.AG(null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.nG=new A.el(0,B.v)
@@ -106092,7 +106092,7 @@ B.Lw=A.a(s([B.iJ,B.lU,B.TG]),A.a5("u<xY>"))
 B.C0=new A.uT(0,"count")
 B.C1=new A.uT(1,"sum")
 B.C2=new A.uT(2,"average")
-B.pF=A.a(s([B.C0,B.C1,B.C2]),A.a5("u<uT>"))
+B.pE=A.a(s([B.C0,B.C1,B.C2]),A.a5("u<uT>"))
 B.Lx=A.a(s([B.jm,B.jn]),A.a5("u<Ag>"))
 B.UE=new A.pA(0,"solid")
 B.B1=new A.pA(1,"double")
@@ -106100,7 +106100,7 @@ B.UH=new A.pA(2,"dotted")
 B.UJ=new A.pA(3,"dashed")
 B.UL=new A.pA(4,"wavy")
 B.Lz=A.a(s([B.UE,B.B1,B.UH,B.UJ,B.UL]),A.a5("u<pA>"))
-B.pG=A.a(s([0,0,26624,1023,65534,2047,65534,2047]),t.t)
+B.pF=A.a(s([0,0,26624,1023,65534,2047,65534,2047]),t.t)
 B.eU=A.a(s([B.dj,B.cn,B.fL,B.fM,B.jl]),t.QP)
 B.nO=new A.N(419430400)
 B.Pd=new A.l(0,2)
@@ -106110,11 +106110,11 @@ B.bo=new A.u2(0,"clamp")
 B.fz=new A.u2(1,"repeated")
 B.fA=new A.u2(2,"mirror")
 B.dc=new A.u2(3,"decal")
-B.pH=A.a(s([B.bo,B.fz,B.fA,B.dc]),A.a5("u<u2>"))
+B.pG=A.a(s([B.bo,B.fz,B.fA,B.dc]),A.a5("u<u2>"))
 B.Mx=new A.mT("en","US")
-B.pI=A.a(s([B.Mx]),t.ss)
+B.pH=A.a(s([B.Mx]),t.ss)
 B.LG=A.a(s([0,0,32722,12287,65535,34815,65534,18431]),t.t)
-B.pJ=A.a(s([0,0,65490,12287,65535,34815,65534,18431]),t.t)
+B.pI=A.a(s([0,0,65490,12287,65535,34815,65534,18431]),t.t)
 B.QI=new A.t5(0,"get")
 B.QJ=new A.t5(1,"update")
 B.QK=new A.t5(2,"set")
@@ -107436,15 +107436,12 @@ B.PU=new A.QX(0,"portrait")
 B.PV=new A.QX(1,"landscape")
 B.PW=new A.wG(null)
 B.Jh=new A.aA(22,22,22,22)
-B.BY=new A.uP("assets/target-svgrepo-com.svg","Pixel Perfect","I ensure pixel-perfect precision in every design detail, prioritizing immaculate user experiences.",null)
-B.BZ=new A.uP("assets/quality-certificate-award-svgrepo-com.svg","High Quality","I consistently deliver high-quality solutions, ensuring excellence in every aspect of project delivery.",null)
-B.C_=new A.uP("assets/idea-svgrepo-com.svg","Awesome Idea"," I bring creativity and innovation, turning every idea into something extraordinary.",null)
-B.pE=A.a(s([B.BY,B.BZ,B.C_]),t.p)
-B.Rj=new A.ET(B.aL,B.l3,B.aZ,B.F,null,B.cj,null,B.pE,null)
-B.PY=new A.af(B.Jh,B.Rj,null)
-B.J6=new A.aA(0,22,0,22)
-B.HN=new A.vk(B.am,B.C,B.x,B.F,null,B.cj,null,B.pE,null)
-B.PZ=new A.af(B.J6,B.HN,null)
+B.C_=new A.uP("target-svgrepo-com.svg","Pixel Perfect","I ensure pixel-perfect precision in every design detail, prioritizing immaculate user experiences.",null)
+B.BY=new A.uP("quality-certificate-award-svgrepo-com.svg","High Quality","I consistently deliver high-quality solutions, ensuring excellence in every aspect of project delivery.",null)
+B.BZ=new A.uP("idea-svgrepo-com.svg","Awesome Idea"," I bring creativity and innovation, turning every idea into something extraordinary.",null)
+B.pJ=A.a(s([B.C_,B.BY,B.BZ]),t.p)
+B.Rj=new A.ET(B.aL,B.l3,B.aZ,B.F,null,B.cj,null,B.pJ,null)
+B.PX=new A.af(B.Jh,B.Rj,null)
 B.K2=new A.hb(57686,!1)
 B.GR=new A.N(4293457385)
 B.Gy=new A.N(4291356361)
@@ -107460,6 +107457,9 @@ B.Os=new A.cK([50,B.GR,100,B.Gy,200,B.Gi,300,B.G0,400,B.FO,500,B.FG,600,B.FA,700
 B.OD=new A.wu(B.Os,4283215696)
 B.K9=new A.l4(B.K2,B.OD,null,null)
 B.w6=new A.af(B.ct,B.K9,null)
+B.J6=new A.aA(0,22,0,22)
+B.HO=new A.vk(B.am,B.C,B.x,B.F,null,B.cj,null,B.pJ,null)
+B.PZ=new A.af(B.J6,B.HO,null)
 B.bI=new A.Rp(0,"fill")
 B.Q_=new A.Rq(0,"fill")
 B.a6=new A.Rp(1,"stroke")
@@ -107842,10 +107842,10 @@ B.U8=new A.cN(7)
 B.U9=new A.cN(8)
 B.Ua=new A.cN(9)
 B.db=new A.dO(0,"unknown")
-B.TI=new A.tS("assets/icons8-github.svg",null,null,null,null)
-B.AS=new A.y4(null,null,B.TI,null,null)
-B.TJ=new A.tS("assets/icons8-linkedin.svg",null,null,null,null)
-B.AT=new A.y4(null,null,B.TJ,null,null)
+B.TJ=new A.tS("icons8-linkedin.svg",null,null,null,null)
+B.AS=new A.y4(null,null,B.TJ,null,null)
+B.TI=new A.tS("icons8-github.svg",null,null,null,null)
+B.AT=new A.y4(null,null,B.TI,null,null)
 B.Uj=new A.G1(null,null,null,null,null,null,null,null,null)
 B.Uk=new A.es("_notificationCallStackDepth=")
 B.Ul=new A.es("_listeners=")
